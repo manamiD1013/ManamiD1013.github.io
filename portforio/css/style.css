@@ -93,14 +93,14 @@ nav li{
 }
 .works p{
     width: 100%;
-    margin:0px auto 40px;
+    margin:0px auto 45px;
     font-size: 16px;
     text-align: center;
 }
 
 .works{
     width: 100%;
-    margin: 0 auto 20px;
+    margin: 0 auto;
 }
 .work{
     width:1140px;
