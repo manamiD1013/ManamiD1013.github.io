@@ -2,6 +2,21 @@ body{
     background-color: #ebebeb;
     font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
 }
+
+
+
+@keyframes  about-fade-in{
+
+    0%{
+        opacity: 0;
+        transform: translate(0,80px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
 header{
     width: 1140px;
     height: 140px;
@@ -36,8 +51,11 @@ header a{
 
 
 }
+header a:hover{
+    color: #8faabf;
+}
 .main-visual{
-    width: 100%;
+    width: 1400px;
     height: 420px;
     margin: 0 auto 150px;
 }
@@ -51,10 +69,19 @@ h2{
     width: 1140px;
     margin:0px auto 145px;
     color: #a3a3a3;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(0,80px);
+    animation-name: about-fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 
 }
 .About section{
-    overflow: hidden;
+
 }
 .About section .profile-pic{
     float: left;
@@ -75,6 +102,13 @@ h2{
     width: 1140px;
     margin:0px auto 145px;
     color: #a3a3a3;
+    transform: translate(0,80px);
+    animation-name: about-fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 .profile-pic{
@@ -83,13 +117,33 @@ h2{
 
 .works {
     width: 1140px;
-    margin:0px auto 340px;
+    margin:0px auto 20px;
     display: flex;
     justify-content: space-between;
+
 }
 .works section{
     width:270px;
+    transition: all 1s ease;
+    cursor: pointer;
 
+}
+.works section img:hover{
+    opacity: 0.5
+
+}
+
+
+.btn{
+    font-size: 16px;
+    text-align: right;
+}
+.btn a{
+    text-decoration: none;
+    color: #a3a3a3;
+}
+.btn a:hover{
+    color: #8faabf;
 }
 footer{
     width:1140px;
@@ -115,6 +169,10 @@ footer nav ul li a{
     font-size: 14px;
     color: #a3a3a3;
     text-decoration: none;
+}
+footer nav ul li a:hover{
+    color:#8faabf;
+
 }
 footer p{
     color: #a3a3a3;
