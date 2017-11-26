@@ -1,0 +1,125 @@
+body{
+    background-color: #ebebeb;
+    font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+header{
+    width: 1140px;
+    height: 140px;
+    margin: 0px auto 0px;
+    overflow: hidden;/* 高さを確保する為 */
+}
+header h1{
+    float: left;
+    margin: 65px auto 0px;
+}
+header nav{
+    font-family: "Myriad Pro";
+    width: 1140px;
+    margin: 90px auto 0px;
+
+
+}
+header ul{
+float: right;
+}
+header li{
+    float: left;
+    margin-left: 30px;
+
+}
+header a{
+    font-size: 14px;
+    color: #a3a3a3;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+
+
+}
+.main-visual{
+    width: 1400px;
+    height: 420px;
+    margin: 0 auto 150px;
+}
+
+h2{
+    font-family: "Myriad Pro";
+    font-size: 48px;
+    margin-bottom: 80px;
+}
+.About{
+    width: 1140px;
+    margin:0px auto 145px;
+    color: #a3a3a3;
+
+}
+.About section{
+    overflow: hidden;
+}
+.About section .profile-pic{
+    float: left;
+    margin-right: 35px;
+}
+.About section .name{
+    font-size: 18px;
+    color: #a3a3a3;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+.About p{
+    font-size: 16px;
+    color: #a3a3a3;
+}
+.Works{
+    width: 1140px;
+    margin:0px auto 145px;
+    color: #a3a3a3;
+}
+
+.profile-pic{
+
+}
+
+.works {
+    width: 1140px;
+    margin:0px auto 340px;
+    display: flex;
+    justify-content: space-between;
+}
+.works section{
+    width:270px;
+
+}
+footer{
+    width:1140px;
+    height: 145px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+footer nav{
+
+
+}
+footer nav ul{
+    width: 260px;
+    float: left;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+footer nav ul li{
+
+}
+footer nav ul li a{
+    font-size: 14px;
+    color: #a3a3a3;
+    text-decoration: none;
+}
+footer p{
+    color: #a3a3a3;
+    float: right;
+    margin-top: 70px;
+    font-size: 10px;
+    text-align: right;
+}

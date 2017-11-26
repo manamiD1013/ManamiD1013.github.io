@@ -1,0 +1,106 @@
+/* Common style */
+body{
+    font-size: 13px;
+    font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height: 1.5;
+}
+a{
+    color:#0099CC;
+    text-decoration:underline;
+}
+a:hover{
+    color:#CCCCCC;
+}
+
+/* header */
+header{
+    width: 950px;
+    margin: 40px auto;
+    overflow: hidden;/* 高さを確保する為 */
+}
+header h1{
+    float: left;
+    width: 240px;
+}
+header p{
+    line-height: 2.1;
+}
+
+/* nav */
+nav{
+    width: 950px;
+    margin: 0 auto 40px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav li{
+    width: 150px;
+}
+nav a{
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px #000 solid;
+    display: block;
+}
+nav a:hover{
+    border-bottom: 1px #CCC solid;
+}
+
+/* main-visual */
+.main-visual{
+    width: 950px;
+    margin: 0 auto 40px;
+}
+
+/* container */
+.container{
+    width: 950px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.container section{
+    width: 310px;
+}
+.container h2{
+    font-weight: bold;
+    border-bottom: 1px #000 solid;
+    margin-bottom: 10px;
+}
+.news-list{
+    margin-bottom: 20px;
+    border-bottom: 1px #000 solid;
+    padding-bottom: 20px;
+}
+.news-list:last-child{
+    border-bottom: none;
+}
+.news-time{
+    font-size: 12px;
+}
+.todaysmenu-container{
+    display: flex;
+    justify-content: space-between;
+}
+.todaysmenu-container section{
+    width: 150px;
+}
+.more{
+    margin-top: 10px;
+    text-align: right;
+}
+
+footer{
+    width: 950px;
+    margin: 40px auto;
+    border-top: 1px #000 solid;
+    padding-top: 20px;
+}
+footer p{
+    font-size: 11px;
+    text-align: right;
+}
+Add Comment C

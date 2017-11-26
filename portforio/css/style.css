@@ -58,6 +58,7 @@ nav ul{
     line-height: 65px
 }
 nav li{
+
     width:165px;
     color:#CCCCCC;
 }
@@ -115,7 +116,7 @@ nav li{
 }
 .work img{
     margin:0 auto 50px;
-    
+
 }
 .work h3{
     font-size:18px;
