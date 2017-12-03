@@ -178,7 +178,8 @@ h2{
         display: block;
     }
     .works section{
-        margin-bottom: 20px;
+        margin:20px auto;
+        
     }
 }
 footer{
