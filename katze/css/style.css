@@ -113,7 +113,7 @@ h2{
 }
 @media (max-width:767px){
     .About{
-        width:100%; 
+        width:100%;
     }
     .About section .profile-pic{
         float: none;
@@ -208,4 +208,15 @@ footer p{
     margin-top: 70px;
     font-size: 10px;
     text-align: right;
+}
+
+@media (max-width:767px){
+    footer nav ul{
+        float: none;
+    }
+    footer p{
+        float: none;
+        text-align: left;
+        margin-top: 20px;
+    }
 }
