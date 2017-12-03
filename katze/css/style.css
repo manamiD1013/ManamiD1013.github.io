@@ -112,9 +112,13 @@ h2{
     color: #a3a3a3;
 }
 @media (max-width:767px){
+    .Aboun{
+        box-sizing: border-box; 
+    }
     .About section .profile-pic{
         float: none;
         margin-bottom:20px;
+
     }
 }
 
@@ -136,7 +140,7 @@ h2{
 }
 
 .works {
-    width: 1140px;
+    width: 100%;
     margin:0px auto 20px;
     display: flex;
     justify-content: space-between;
