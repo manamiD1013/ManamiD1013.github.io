@@ -173,6 +173,12 @@ h2{
 .btn a:hover{
     color: #8faabf;
 }
+@media (max-width:767px){
+    .works {
+        width: 100%;
+        margin:0px auto 20px;
+        display: block;
+}
 footer{
     width:1140px;
     height: 145px;
