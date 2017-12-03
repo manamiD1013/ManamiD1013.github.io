@@ -74,7 +74,7 @@ h2{
     }
     .main-visual img{
         position: absolute;
-        right:-150px;
+        left:-150px;
     }
 }
 
