@@ -174,10 +174,12 @@ h2{
     color: #8faabf;
 }
 @media (max-width:767px){
-    .works {
-        width: 100%;
-        margin:0px auto 20px;
+    .works{
         display: block;
+    }
+    .works section{
+        margin-bottom: 20px;
+    }
 }
 footer{
     width:1140px;
