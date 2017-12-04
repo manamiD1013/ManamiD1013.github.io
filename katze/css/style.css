@@ -175,11 +175,12 @@ h2{
 }
 @media (max-width:767px){
     .works{
+        
         display: block;
     }
     .works section{
-        margin:20px auto;
-        
+        margin-bottom: 20px;
+        box-sizing: border-box;
     }
 }
 footer{
