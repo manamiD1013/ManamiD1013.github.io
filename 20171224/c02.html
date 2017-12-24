@@ -13,7 +13,13 @@
         $(function(){
             // canvasの取得
             var stage = new createjs.Stage('stage');
-
+            //画像の登録
+            var mainfest =[{src:'img/calcium.png'}];
+            var loadQueue = new createjs.loadQueue();
+            loadQueue.loadMainfest(mainfest);
+            loadQueue.addEventListener('complete',function(){
+                console.log('読み込み完了')；
+            });
 
 
 
