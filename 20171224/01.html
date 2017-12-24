@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>devicemotion</title>
 </head>
 <body>
@@ -11,11 +12,31 @@
         <li></li>
         <li></li>
     </ul>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
+    // DOMの読み込み
     $(function(){
-        console.log('読み込んだよ')；
+
+        console.log('読み込んだよ');
+
+        // devicemotion event
+        window.addEventListener('devicemotion',function(evt){
+            console.log(evt);
+            // X軸
+            var x = evt.acceleration.x;
+            // Y軸
+            var y = evt.acceleration.y;
+            // Z軸
+            var z = evt.acceleration.z;
+
+            $('ul li:eq(0)').text('x: ' + x);
+            $('ul li:eq(1)').text('y: ' + y);
+            $('ul li:eq(2)').text('z: ' + z);
+
+
+        });
+
+
     });
     </script>
 </body>

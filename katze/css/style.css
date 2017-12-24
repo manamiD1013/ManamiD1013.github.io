@@ -76,9 +76,6 @@ h2{
     margin-bottom: 80px;
 }
 @media (max-width:767px){
-    header{
-        background-position: -270px center;
-    }
     .main-visual{
         position: relative;
     }
@@ -112,28 +109,6 @@ header nav{
         margin: 0;
         position: relative;
     }
-    .mobile-close{
-        display: block;
-        position: absolute;
-        right:10px;
-        top:10px;
-        width: 40px;
-        height: auto;
-    }
-    .mobile-close img{
-        width: 40px;
-        height: auto;
-    }
-    header nav ul{
-        width: 100%;
-        float: none; /* floatの解除 */
-        display: block; /* flexの解除 */
-    }
-    header nav ul li a{
-        display: block;
-        height: auto;
-        text-align: center;
-    }
 }
 
 .About{
@@ -155,6 +130,8 @@ header nav{
 
 }
 .About section .profile-pic{
+    width: 265px;
+    
     float: left;
     margin-right: 35px;
 }
@@ -172,10 +149,10 @@ header nav{
 @media (max-width:767px){
     .About{
         width:100%;
-        float: none;
     }
-    .About section .name{
-        margin-top:20px;
+    .About section .profile-pic{
+        float: none;
+        margin-bottom:20px;
 
     }
 }
@@ -209,7 +186,6 @@ header nav{
     transition: all 1s ease;
     cursor: pointer;
 
-
 }
 .works section img{
     transition: opacity 0.3s linear;
@@ -240,7 +216,6 @@ header nav{
     .works section{
         margin-bottom: 20px;
         box-sizing: border-box;
-
     }
 }
 footer{
