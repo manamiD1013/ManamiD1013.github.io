@@ -9,22 +9,51 @@
 </head>
 <body>
     <h1>geolocation|GPSのテスト</h1>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <dl id="weatherMap">
+        <dt>地域名</dt>
+        <dd id="areaName"></dd>
+    </dl>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js">
 
     </script>
     <script>
         $(function(){
 
-            console.log('読み込んだよ')；
-            navigator.geolocation.getCurrentPosition(function(pos)){
+            navigator.geolocation.getCurrentPosition(function(pos){
                 console.log(pos);
-            }
+                var lat = pos.coords.latitude;
+                var lon= pos.coords.longitude;
+                lat = callocation(lat);
+                lon = callocation(lon);
+                console.log('lat:'+lat,'lon:'+lon);
+                setWeather(lat,lon);//緯度経度の受け渡し
+            });
+            function setWeather(lat,lon){
+            const apikey = '85f78a78ddf93b8981b19189f4035f57';
+            var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+ apikey;
+
+                      // ajax通信
+                      $.ajax({
+                          url:weatherUrl,
+                          dataType:'json'
+                      }).done(function(data){
+                          // 通信成功
+                          console.log(data);
+                        var areaName = data.name;
+                        $('#areaName').text(areaName);
+                      }).fail(function(){
+                          console.log('ajax error'); //通信失敗
+                      });
+
+                  }
+                function callocation(num){
+                    var numA = num*100;//2桁上がる
+                    numA = Math.floor(numA)/100;//切り捨てて2桁下げる
+                    return numA;
+
+                }
         });
+
     </script>
 </body>
 </html>
