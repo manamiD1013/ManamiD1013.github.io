@@ -14,32 +14,50 @@
         $(function(){
             // canvasの取得
             var stage = new createjs.Stage('stage');
-            //画像の登録
-            var manifest =[{src:'img/tomato.png'},
-              {src:'img/calcium.png'}
-        ];
+
+            // 画像の登録
+            var manifest = [
+                {src:'img/tomato.png'},
+                {src:'img/calcium.png'}
+            ];
+            // loadQueue プリロード
             var loadQueue = new createjs.LoadQueue();
+            // ファイルの指定　読み込み開始
             loadQueue.loadManifest(manifest);
+            // 画像を全部読み込み終わったら
             loadQueue.addEventListener('complete',function(){
-                //console.log('読み込み完了')；
+                console.log('読み込み完了');
                 addStage();
             });
 
+            // ステージに配置
             function addStage(){
+                // Bitmap
                 var tomato = new createjs.Bitmap(manifest[0].src);
                 stage.addChild(tomato);
-                tomato.x =100;
-                tomato.y =100;
+                tomato.x = 100;
+                tomato.y = 100;
                 tomato.alpha = 0;
-                createjs.Tween.get(tomato).to({alpha:1},1000);
+                createjs.Tween.get(tomato).wait(500).to({alpha:1},1000);
+
+                // sprite
                 var calciumSpriteSheet = new createjs.SpriteSheet(calciumSprite);
                 var calcium = new createjs.Sprite(calciumSpriteSheet,'stand');
                 stage.addChild(calcium);
-                calucium.x = 100;
+                calcium.x = 0;
                 calcium.y = 300;
-                calcium.alpha =0;
+                calcium.alpha = 0;
                 createjs.Tween.get(calcium).wait(1000).to({alpha:1},1000);
-
+                // クリックしたら
+                calcium.addEventListener('click',function(){
+                    createjs.Tween.get(calcium).to({x:400},2000);
+                })
+                function calciumWalk(){
+                    calcium.gotoAndPlay('walk');
+                }
+                function calciumStop(){
+                    calcium.gotoAndPlay('stop');
+                }
             }
 
 
