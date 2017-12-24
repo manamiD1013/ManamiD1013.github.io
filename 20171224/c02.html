@@ -5,7 +5,7 @@
     <title>Canvas</title>
 </head>
 <body>
-    <canvas id="stage" width="500" height="500"></canvas>
+    <canvas id="stage" width="600" height="500"></canvas>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script src="sprite.js"></script>
@@ -50,14 +50,16 @@
                 createjs.Tween.get(calcium).wait(1000).to({alpha:1},1000);
                 // クリックしたら
                 calcium.addEventListener('click',function(){
-                    createjs.Tween.get(calcium).to({x:400},2000);
+                    createjs.Tween.get(calcium).call(calciumWalk).to({x:400},2000).call(calciumStop);
                 })
+
                 function calciumWalk(){
                     calcium.gotoAndPlay('walk');
                 }
                 function calciumStop(){
                     calcium.gotoAndPlay('stop');
                 }
+
             }
 
 
