@@ -126,14 +126,16 @@ header nav{
     animation-fill-mode: forwards;
 
 }
-.About section{
-
+.About section .about-container{
+    overflow: hidden;
 }
-.About section .profile-pic{
+.profile-pic{
     width: 265px;
-    
     float: left;
     margin-right: 35px;
+}
+.profile{
+    overflow: hidden;
 }
 .About section .name{
     font-size: 18px;
@@ -150,7 +152,7 @@ header nav{
     .About{
         width:100%;
     }
-    .About section .profile-pic{
+    .About .profile-pic{
         float: none;
         margin-bottom:20px;
 
@@ -170,9 +172,7 @@ header nav{
     animation-fill-mode: forwards;
 }
 
-.profile-pic{
 
-}
 
 .works {
     width: 100%;

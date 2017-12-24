@@ -18,7 +18,7 @@
     $(function(){
 
         console.log('読み込んだよ');
-
+window.removeEventListner('devicemotion',shakeDevice);
         // devicemotion event
         window.addEventListener('devicemotion',function(evt){
             console.log(evt);
@@ -32,7 +32,10 @@
             $('ul li:eq(0)').text('x: ' + x);
             $('ul li:eq(1)').text('y: ' + y);
             $('ul li:eq(2)').text('z: ' + z);
-
+            if( Math.abs(x)>10||Math.abs(y)>10||Math.abs(z)){
+                $('h1').text('振り終わったよ')；
+                window.removeEventListner('devicemotion',shakeDevice);
+            }
 
         });
 
