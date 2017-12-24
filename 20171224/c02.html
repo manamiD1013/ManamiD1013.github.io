@@ -8,20 +8,39 @@
     <canvas id="stage" width="500" height="500"></canvas>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="sprite.js"></script>
     <script>
         // DOMの読み込み
         $(function(){
             // canvasの取得
             var stage = new createjs.Stage('stage');
             //画像の登録
-            var mainfest =[{src:'img/calcium.png'}];
-            var loadQueue = new createjs.loadQueue();
-            loadQueue.loadMainfest(mainfest);
+            var manifest =[{src:'img/tomato.png'},
+              {src:'img/calcium.png'}
+        ];
+            var loadQueue = new createjs.LoadQueue();
+            loadQueue.loadManifest(manifest);
             loadQueue.addEventListener('complete',function(){
-                console.log('読み込み完了')；
+                //console.log('読み込み完了')；
+                addStage();
             });
 
+            function addStage(){
+                var tomato = new createjs.Bitmap(manifest[0].src);
+                stage.addChild(tomato);
+                tomato.x =100;
+                tomato.y =100;
+                tomato.alpha = 0;
+                createjs.Tween.get(tomato).to({alpha:1},1000);
+                var calciumSpriteSheet = new createjs.SpriteSheet(calciumSprite);
+                var calcium = new createjs.Sprite(calciumSpriteSheet,'stand');
+                stage.addChild(calcium);
+                calucium.x = 100;
+                calcium.y = 300;
+                calcium.alpha =0;
+                createjs.Tween.get(calcium).wait(1000).to({alpha:1},1000);
 
+            }
 
 
 
