@@ -12,7 +12,15 @@
     <dl id="weatherMap">
         <dt>地域名</dt>
         <dd id="areaName"></dd>
+        <dt>現在の気温</dt>
+        <dd id="areaTemp"></dd>
+        <dt>湿度</dt>
+        <dd id="areaHumidity"></dd>
+        <dt>天気</dt>
+        <dd id="areaWeather"></dd>
+        <dd id="weatherIcon">
     </dl>
+
     <!--nyanya-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js">
 
@@ -40,8 +48,21 @@
                       }).done(function(data){
                           // 通信成功
                           console.log(data);
-                        var areaName = data.name;
-                        $('#areaName').text(areaName);
+                          var areaName = data.name;
+                  $('#areaName').text(areaName);
+                  // 気温
+                  var areaTemp = data.main.temp; //絶対温度
+                  areaTemp = areaTemp - 273.15; // 摂氏
+                  $('#areaTemp').text(Math.round(areaTemp)+'度');
+                  // 湿度
+                  var areaHumidity = data.main.humidity;
+                  $('#areaHumidity').text(areaHumidity+'%');
+                  // 天気
+                  var areaWeather = data.weather[0].description;
+                  $('#areaWeather').text(areaWeather);
+                  //天気アイコン
+                  var weatherIcon = 'http://openweathermap.org/img/w/'+data.weather[0].icon+'.png';
+                  $('#weatherIcon').append('<img src="'+weatherIcon+'">');
                       }).fail(function(){
                           console.log('ajax error'); //通信失敗
                       });
