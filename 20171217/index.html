@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryの練習</title>
+    <link rel="stylesheet" href="css/jq01.css">
+    <style>
+        .red{
+            color:#FF0000;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="title">ドリンクメニュー</h1>
+<ul id="menu">
+    <li>ブレンドコーヒー</li>
+    <li>カフェラテ</li>
+    <li>カプチーノ</li>
+    <li>マキアート</li>
+</ul>
+<button id="btn">クリック</button>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- DOMの読み込み -->
+<script>
+$(function(){
+    //#
+    $('#btn').on('click',function(){
+        console.log('#btnがクリックされた')
+        $('#title').addClass('fade-in');
+    });
+    //子要素の指定
+    //$('#menu li:eq(1).addClass('red');
+    //$('#menu').find('li:eq(2)').addClass
+    // doucument.querySelectot('#ti('red')tle');
+    // $('#titlr')
+    //複数選択
+    $('#menu li:eq(1),#menu li:eq(2)').addClass('red');
+    $('#menu li:not(:eq(3) )').addClass('red');
+});
+
+</script>
+
+
+</body>
+</html>

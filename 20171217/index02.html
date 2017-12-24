@@ -1,0 +1,50 @@
+Akio Yonekura [11:33 AM]
+added this HTML snippet: jq02.html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>jQueryの練習</title>
+  <link rel="stylesheet" href="css/jq01.css">
+</head>
+<body>
+<h1 id="title">ドリンクメニュー</h1>
+<ul id="menu">
+  <li>ブレンドコーヒー</li>
+  <li>カフェラテ</li>
+  <li>カプチーノ</li>
+  <li>マキアート</li>
+</ul>
+<div id="photo">
+    <img src="img/cafeLatte01.jpg" alt="cafeLatte01">
+    <p id="caption">ラテアート</p>
+</div>
+<button id="btn">クリック</button>
+​
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+// DOMの読み込み
+$(function(){
+  // #btnをクリックしたら
+  $('#btn').on('click', function(){
+    //ループ
+    $('#menu li').each(function(index){
+      console.log(index);
+      var txt =$(this).text(); //テキストの取得
+      console.log(txt);
+    });
+    // テキストの上書き
+    //$('#menu li:eq(1)').text('アイスコーヒー');
+    // $('#menu').prepend('<li>カフェモカ</li>');
+    // $('#menu').append('<li>フラペチーノ</li>');
+    //$('#menu li:eq(0)').appendTo('#menu');
+    $('#menu li:eq(3)').prependTo('#menu');
+    $('#photo img').attr('src','img/cafeLatte02.jpg').attr('art','cafeLatte02');
+    $('#caption').hide();
+});
+});
+
+</script>
+​
+</body>
+</html>
