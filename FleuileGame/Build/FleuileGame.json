@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "FleuileGame.data.unityweb",
+"asmCodeUrl": "FleuileGame.asm.code.unityweb",
+"asmMemoryUrl": "FleuileGame.asm.memory.unityweb",
+"asmFrameworkUrl": "FleuileGame.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
