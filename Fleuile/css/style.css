@@ -1,0 +1,453 @@
+
+
+body{
+    background-color: #ebebeb;
+    font-family:-apple-system, BlinkMacSystemFont, "royalty, sans-serif", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+
+}
+
+
+.main-visual{
+    width: 100%;
+    height: 650px;
+    background:url(../img/header.png) center center no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+.download{
+    position: absolute;
+    bottom: 0%;
+
+    background-color: rgba( 94, 94, 94, 0.6);
+    width:100%;
+
+
+}
+.main-visual::before{
+    width: 100%;
+    height: 650px;
+    /* 透過した黒を重ねる */
+	background-color: rgba(0,0,0,0.5);
+	/* どの範囲に重ねるかを指定 */
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+
+}
+.main-visual section{
+    text-align: center;
+    margin: 0 auto;
+
+}
+.Logo{
+
+    position: absolute;
+    top: 20px;
+  left: 50%;
+  -ms-transform: translate(-50%,0);
+  -webkit-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  margin:0;/*余計な隙間を除く*/
+  padding:0;/*余計な隙間を除く*/
+
+}
+.title{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    -ms-transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    margin:0;/*余計な隙間を除く*/
+    padding:0;/*余計な隙間を除く*/
+
+}
+
+.main-visual nav{
+    width: 100%;
+    height: 65px;
+    text-align:center;
+}
+.main-visual .banner ul{
+    display:inline-block;
+
+    margin: 14px auto;
+}
+.main-visual .banner li{
+    width: 135px;
+    float: left;
+    margin-right: 55px;
+}
+.main-visual .banner li:last-child{
+    margin-right: 0;
+}
+
+
+
+.link {
+    font-family: royalty, sans-serif;
+    width: 100%;
+}
+.nav-container{
+    width: 100%;
+    height: 65px;
+    background-color: #708C8A;
+    text-align: center;
+
+}
+
+.nav-container ul{
+    display:inline-block;
+    margin: 22px auto;
+
+}
+.nav-container li{
+font-style: normal;
+font-weight: 100;
+    font-size:20px;
+    color:#FFF;
+    float: left;
+    margin-right: 135px;
+}
+.nav-container li:last-child{
+    margin-right: 0;
+}
+
+.nav-container a{
+    color:#FFF;
+    text-decoration: none;
+}
+.nav-container a:hover{
+    color:#000;
+    text-decoration: none;
+}
+h2{
+    width: 100%;
+    font-family: royalty, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    color: #6F6F6F;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 30px;
+
+}
+
+.movie{
+    width: 100%;
+    height: 530px;
+    background-color: #FFF2E3;
+    margin: 0 auto;
+}
+.story{
+    width: 100%;
+    height: 530px;
+    background-color: #FFDBDF;
+    margin: 0 auto;
+}
+.howto{
+    width: 100%;
+    height: 530px;
+    background-color: #B4CCAF;
+    margin: 0 auto;
+}
+.howto{
+    width: 100%;
+    height: 530px;
+    background-color: #B4CCAF;
+    margin: 0 auto;
+}
+.World{
+    width: 100%;
+    height: 530px;
+    background-color: #B291C2;
+    margin: 0 auto;
+}
+
+.story-container{
+    width: 1140px;
+    margin:0 auto;
+}
+.twin{
+    width: 250px;
+    float:left;
+    margin-left: 70px;
+    margin-right: 160px;
+    padding-top: 35px;
+
+
+}
+.story-text{
+    width: 660px;
+
+    overflow: hidden;
+}
+
+.story-text p{
+    text-align: center;
+    color: #6f6f6f;
+    font-family: "A-OTF Shin Maru Go Pr6 R";
+
+    width: 660px;
+
+    line-height:32px;
+    font-size:16px;
+    padding-top: 50px;
+}
+
+@media (max-width:767px){
+    .story{
+        text-align: center;
+        position: relative;
+
+
+    }
+    .story-container{
+        display: block;
+        text-align: center;
+
+
+    }
+    .story-container section{
+        box-sizing: border-box;
+
+    }
+    .twin img{
+        position: absolute;
+ top: 50%;
+ left: 50%;
+ -ms-transform: translate(-50%,-50%);
+ -webkit-transform: translate(-50%,-50%);
+ transform: translate(-50%,-50%);
+ margin:0;
+ padding:0;
+ /*文字の装飾は省略*/
+        opacity: 0.6;
+
+    }
+    .story-text{
+
+        margin: 0 auto;
+
+
+
+    }
+    .story-text p{
+
+        position: absolute;
+ top: 55%;
+ left: 50%;
+ -ms-transform: translate(-50%,-50%);
+ -webkit-transform: translate(-50%,-50%);
+ transform: translate(-50%,-50%);
+ margin:0;
+ padding:0;
+ /*文字の装飾は省略*/
+    font-size:16px;
+
+    }
+    .mobile-menu img{
+    width: 40px;
+    height: auto;
+}
+}
+
+.howto-container{
+    width: 1140px;
+    margin:0 auto;
+
+}
+.howto-text{
+    width: 700px;
+    margin-left: 30px;
+
+
+
+}
+.howto-text p{
+    padding-top: 150px;
+    text-align: center;
+    color: #6f6f6f;
+    font-family: "A-OTF Shin Maru Go Pr6 R";
+
+    float: left;
+    line-height:32px;
+    size:16px;
+
+
+
+
+}
+.howto-image{
+
+    position: relative;
+    left:90px;
+    bottom: -6px;
+
+}
+@media (max-width:767px){
+    .howto{
+        text-align: center;
+        position: relative;
+
+
+    }
+    .howto-container{
+
+        display: block;
+        text-align: center;
+
+
+    }
+    .howto-container section{
+        box-sizing: border-box;
+
+    }
+
+    .howto-text{
+        margin: 0 auto;
+
+
+    }
+    .howto-text p{
+
+        position: absolute;
+ top: 50%;
+ left: 50%;
+ -ms-transform: translate(-50%,-40%);
+ -webkit-transform: translate(-50%,-40%);
+ transform: translate(-50%,-40%);
+ margin:0;
+ padding:0;
+ /*文字の装飾は省略*/
+    font-size:16px;
+　
+    }
+    .mobile-menu img{
+    width: 40px;
+    height: auto;
+}
+.howto-image img{
+    position: absolute;
+    max-width: 510px;
+   height: auto;
+
+left: 50%;
+-ms-transform: translate(-140%,0%);
+-webkit-transform: translate(-140%,0%);
+transform: translate(-140%,0%);
+margin:0;
+padding:0;
+/*文字の装飾は省略*/
+    opacity: 0.6;
+
+}
+}
+.world{
+    width: 1140px;
+    margin: 0 auto;
+}
+.world-container{
+
+    width: 1140;
+    margin-top:75px;
+    display: flex;
+    justify-content: space-between;
+}
+.world-container section{
+    width: 570px;
+
+}
+.world-container img{
+    margin-bottom: 5px;
+}
+.world-container p{
+    text-align: center;
+    color: #6f6f6f;
+    font-family: "A-OTF Shin Maru Go Pr6 R";
+    size:16px;
+}
+#pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+}
+#pageTop p{
+    text-align: center;
+
+
+}
+
+
+
+#pageTop i {
+     padding-top: 6px;
+     padding-right: 6px;
+}
+
+
+
+#pageTop a {
+  display: block;
+  z-index: 999;
+  padding: 8px 0 0 8px;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  background-color: #9FD6D2;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+
+#pageTop a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+footer{
+    width: 100%;
+    height: 220px;
+    text-align: center;
+    background-color: #283333;
+}
+footer nav{
+
+    width: 100%;
+    height: 65px;
+    text-align:center;
+}
+footer .banner ul{
+    display:inline-block;
+
+    margin: 40px auto 30px;
+}
+footer .banner li{
+    width: 135px;
+    float: left;
+    margin-right: 55px;
+}
+footer .banner li:last-child{
+    margin-right: 0;
+}
+.hana img{
+    margin-bottom: 30px;
+}
+footer p{
+
+}
+.ip {
+    display: none;
+}
+
+@media (max-width: 767px) {
+.ip {
+    display: block;
+}

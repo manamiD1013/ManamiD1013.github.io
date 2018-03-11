@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Fleuile</title>
+</head>
+<body>
+    <div class="main-visual">
+        <section>
+            <img class="Logo" src="img/Logo.png" alt="">
+            <img class="title" src="img/title.png" alt="">
+        </section>
+
+        <nav class="download">
+            <div class="banner">
+                <ul>
+                    <li><a href="#"></a><img src="img/banner1.svg" alt=""></li>
+                    <li><a href="#"><img src="img/banner2.png"width="135"hheight="40" alt=""></a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+    <nav class="link">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#movie-content">Movie</a></li>
+                <li><a href="#story-content">Story</a></li>
+                <li><a href="#howto-content">How To</a></li>
+                <li><a href="#world-content">World</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <section class="movie"id="movie-content">
+        <h2>Movie</h2>
+    </section>
+    <section class="story"id="story-content">
+        <h2>Story</h2>
+        <div class="story-container">
+            <section class="twin">
+                <img src="img/story.png" alt="">
+            </section>
+            <section class="story-text">
+                <p>ここは小さな惑星フルーワール。<br>
+    そこは花が咲くことで色彩を保つ不思議な星。<br>
+    けれどある日、突然花が消えてしまった。<br>
+    星から色彩は失われ、様々なものは全て、<br class="ip">姿が見えなくなってしまった。<br>
+    悲しみにくれる少女リース。<br>
+    そんな彼女の前に花の女神・フルールが現れる。<br>
+    <br>
+    「どうかあなたは花を咲かせて」<br>
+    「そうすればきっと、あなたが愛したこの星は<br class="ip">元の輝きを取り戻すわ」<br><br>
+
+    フルールからの6つの願いを叶えて花を咲かせ、<br class="ip">この星の色彩を取り戻そう。</p>
+            </section>
+        </div>
+
+    </section>
+    <section class="howto"id="howto-content">
+        <h2>How To</h2>
+        <div class="howto-container">
+            <section class="howto-text">
+                <p>タップでリースを動かして花を咲かせる<br class="ip">きっかけとなる“鍵”を見つけよう。<br>
+    いろんなところをタップしたり、<br class="ip">時には誰かから話を聞くと、<br>
+    アイテムを入手したり鍵につながるヒントを<br class="ip">聞いたりすることができるよ。<br>
+    必要となるアイテムやヒントを全て見つけて<br class="ip">花を咲かせよう。</p>
+            </section>
+            <section class="howto-image">
+                <img src="img/HowTo.png" alt="">
+            </section>
+        </div>
+
+    </section>
+    <section class="World"id="world-content">
+        <h2>World</h2>
+        <div class="world">
+            <div class="world-container">
+                <section >
+                    <img src="img/world1.png" alt="""width="570"height="321">
+                    <p>色彩を失ったフルーワール</p>
+                </section>
+                <section>
+                    <img src="img/world2.png" alt=""width="570"height="321">
+                    <p>色彩を取り戻したフルーワール</p>
+                </section>
+            </div>
+        </div>
+
+    </section>
+    <p id="pageTop"><a href="#"><i class="fas fa-angle-up fa-fa-lg"></i></a></p>
+    <footer>
+
+        <div class="banner">
+            <ul>
+                <li><a href="#"></a><img src="img/banner1.svg" alt=""></li>
+                <li><a href="#"><img src="img/banner2.png"width="135"hheight="40" alt=""></a></li>
+            </ul>
+
+        </div>
+        <div class="hana">
+            <img src="img/Footer.png" alt="" />
+        </div>
+
+        <small><p>©︎2018 Fleuile Project</p></small>
+    </footer>
+    <script>
+      $(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          var speed = 400; // ミリ秒で記述
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+      $(function(){
+var topBtn=$('#pageTop');
+topBtn.hide();
+
+
+
+//◇ボタンの表示設定
+$(window).scroll(function(){
+  if($(this).scrollTop()>80){
+
+    //---- 画面を80pxスクロールしたら、ボタンを表示する
+    topBtn.fadeIn();
+
+  }else{
+
+    //---- 画面が80pxより上なら、ボタンを表示しない
+    topBtn.fadeOut();
+
+  }
+});
+
+
+
+// ◇ボタンをクリックしたら、スクロールして上に戻る
+topBtn.click(function(){
+  $('body,html').animate({
+  scrollTop: 0},500);
+  return false;
+
+});
+
+
+});
+    </script>
+</body>
+</html>
