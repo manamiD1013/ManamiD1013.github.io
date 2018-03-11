@@ -89,7 +89,7 @@ body{
     margin-right: 0;
 }
 @media (max-width:767px){
-    
+
 
  }
 
@@ -230,7 +230,7 @@ h2{
  margin:0;
  padding:0;
  /*文字の装飾は省略*/
-        opacity: 0.6;
+        opacity: 0.4;
 
     }
     .story-text{
@@ -329,6 +329,7 @@ h2{
  padding:0;
  /*文字の装飾は省略*/
     font-size:14px;
+    z-index: 2;
 　
     }
     .mobile-menu img{
@@ -337,6 +338,7 @@ h2{
 }
 .howto-image img{
     position: absolute;
+    z-index: 1;
     max-width: 510px;
    height: auto;
 
@@ -347,7 +349,7 @@ transform: translate(-140%,0%);
 margin:0;
 padding:0;
 /*文字の装飾は省略*/
-    opacity: 0.6;
+    opacity: 0.4;
 
 }
 }
@@ -391,7 +393,7 @@ padding:0;
 
 #pageTop i {
      padding-top: 6px;
-     padding-right: 6px;
+     padding-right: 8px;
 }
 
 
