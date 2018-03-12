@@ -173,7 +173,11 @@ h2{
     background-color: #B291C2;
     margin: 0 auto;
 }
-
+.video{
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+}
 .story-container{
     width: 1140px;
     margin:0 auto;
