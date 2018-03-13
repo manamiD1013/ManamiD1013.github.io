@@ -57,7 +57,7 @@ body{
 }
 .title{
     position: absolute;
-    bottom: 100px;
+    bottom: 130px;
     left: 50%;
     -ms-transform: translate(-50%,0);
     -webkit-transform: translate(-50%,0);
