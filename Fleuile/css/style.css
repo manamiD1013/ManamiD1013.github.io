@@ -5,6 +5,22 @@ body{
     font-family:-apple-system, BlinkMacSystemFont, " royalty", sans-serif, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif,"A-OTF Shin Maru Go Pr6 R";
 
 }
+.fade-in{
+    animation-name: my-fade-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes my-fade-in {
+    0%{
+           opacity: 0;
+       }
+       100%{
+           opacity: 1;
+       }
+}
+
 
 .title img { width: 100%; }
 .main-visual{
@@ -57,7 +73,7 @@ body{
 }
 .title{
     position: absolute;
-    bottom: 150px;
+    bottom: 130px;
     left: 50%;
     -ms-transform: translate(-50%,0);
     -webkit-transform: translate(-50%,0);
@@ -181,23 +197,26 @@ h2{
 .story-container{
     width: 1140px;
     margin:0 auto;
+
 }
-.twin{
+.story-container .img{
     width: 250px;
     float:left;
     margin-left: 70px;
     margin-right: 160px;
     padding-top: 35px;
-
+    opacity:0;
+    animation-delay: 1s:
 
 }
-.story-text{
+.story-container .text{
     width: 660px;
-
+    opacity: 0;
     overflow: hidden;
+    animation-delay:2s;
 }
 
-.story-text p{
+.story-container .text p{
     text-align: center;
     color: #6f6f6f;
     font-family: "A-OTF Shin Maru Go Pr6 R";
@@ -224,7 +243,7 @@ h2{
         box-sizing: border-box;
 
     }
-    .twin img{
+    .story-container .img img{
         position: absolute;
  top: 50%;
  left: 50%;
@@ -237,14 +256,14 @@ h2{
         opacity: 0.4;
 
     }
-    .story-text{
+    .story-container .text{
 
         margin: 0 auto;
 
 
 
     }
-    .story-text p{
+    .story-container .text p{
 
         position: absolute;
  top: 55%;
@@ -269,14 +288,16 @@ h2{
     margin:0 auto;
 
 }
-.howto-text{
+.howto-container .text{
     width: 700px;
     margin-left: 30px;
+    opacity: 0;
+    animation-delay:1s;
 
 
 
 }
-.howto-text p{
+.howto-container .text p{
     padding-top: 150px;
     text-align: center;
     color: #6f6f6f;
@@ -290,11 +311,13 @@ h2{
 
 
 }
-.howto-image{
+.howto-container .img{
 
     position: relative;
     left:90px;
     bottom: -6px;
+    opacity: 0;
+    animation-delay:2s;
 
 }
 @media (max-width:767px){
@@ -316,12 +339,12 @@ h2{
 
     }
 
-    .howto-text{
+    .howto-container .text{
         margin: 0 auto;
 
 
     }
-    .howto-text p{
+    .howto-container .text p{
 
         position: absolute;
  top: 50%;
@@ -340,7 +363,7 @@ h2{
     width: 40px;
     height: auto;
 }
-.howto-image img{
+.howto-container .img img{
     position: absolute;
     z-index: 1;
     max-width: 510px;
