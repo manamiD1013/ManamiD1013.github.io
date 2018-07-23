@@ -1,0 +1,2 @@
+/Users/doimanami/Desktop/Unity/unity3dRPG/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+/Users/doimanami/Desktop/Unity/unity3dRPG/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache

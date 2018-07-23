@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{12B07CF8-370C-99B9-93E9-4D7F5CFA8E71}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Spawn.cs">
+    <Files>
+      <File FileName="Assets/Script/CharacterController.cs" Line="88" Column="13" />
+      <File FileName="Assets/Script/Spawn.cs" Line="13" Column="36" />
+      <File FileName="Assets/Script/DestroyStar.cs" Line="6" Column="12" />
+      <File FileName="Assets/Script/MeteoController.cs" Line="22" Column="7" />
+      <File FileName="Assets/Script/MeteoSpawn.cs" Line="4" Column="1" />
+      <File FileName="../../../Documents/:Users:doimanami:Desktop:Unity:Star:Assets:Script:GameController.cs" Line="27" Column="1" />
+      <File FileName="Assets/Script/TimeManager.cs" Line="27" Column="5" />
+      <File FileName="Assets/Script/StartCount.cs" Line="40" Column="14" />
+      <File FileName="Assets/Script/ScoreController.cs" Line="45" Column="9" />
+      <File FileName="Assets/Script/GameController.cs" Line="44" Column="26" />
+      <File FileName="Assets/Script/ButtonController.cs" Line="7" Column="12" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
