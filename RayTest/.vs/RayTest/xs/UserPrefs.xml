@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{1EA196AB-0F25-4B61-95A6-C4B4014708FF}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Bullet.cs">
+    <Files>
+      <File FileName="Assets/RayControl.cs" Line="5" Column="42" />
+      <File FileName="Assets/EnemySpawner.cs" Line="23" Column="171" />
+      <File FileName="Assets/Stage.cs" Line="16" Column="50" />
+      <File FileName="Assets/RayController.cs" Line="22" Column="76" />
+      <File FileName="Assets/Bullet.cs" Line="19" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
