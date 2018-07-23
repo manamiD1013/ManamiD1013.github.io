@@ -35,9 +35,12 @@ $(window).on('scroll',function(){
     var windowHeight = $(window).height();
     var storyContainerTop = $('.story-container').offset().top;
 	var howtoContainerTop = $('.howto-container').offset().top;
+	var worldContainerTop=
+	$('.world-container').offset().top;
 	// 上からのスクロール値
 	var dy = $(this).scrollTop();
 	console.log('dy: ' + dy);
+
 
 	if(dy >= storyContainerTop - windowHeight){
 	            // console.log('worksContainerTopだよ');
@@ -48,6 +51,11 @@ $(window).on('scroll',function(){
 		$('.howto-container').find('.img').addClass('fade-in');
 
 		$('.howto-container').find('.text').addClass('fade-in');
+	}
+	if(dy>=worldContainerTop - windowHeight){
+		$('.world-container').find('#world1').addClass('fade-in');
+
+		$('.world-container').find('#world2').addClass('fade-in');
 	}
 
 

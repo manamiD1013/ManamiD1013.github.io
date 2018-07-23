@@ -393,6 +393,7 @@ padding:0;
 }
 .world-container section{
     width: 570px;
+    opacity: 0;
 
 }
 .world-container img{
@@ -403,6 +404,12 @@ padding:0;
     color: #6f6f6f;
     font-family: "A-OTF Shin Maru Go Pr6 R";
     size:16px;
+}
+#world1{
+    animation-delay:1s;
+}
+#world2{
+    animation-delay:2s;
 }
 #pageTop {
   position: fixed;
