@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="countUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EC-be-jOx">
+                                <rect key="frame" x="112.5" y="130" width="151" height="151"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.0078431372549019607" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="9Gu-v1-6Ca"/>
+                                    <constraint firstAttribute="width" constant="151" id="qqM-cF-XKC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qmb-Fp-iSN">
+                                <rect key="frame" x="235" y="492" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.0078431372550000003" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="TLd-7Q-5CY"/>
+                                    <constraint firstAttribute="height" constant="80" id="cqa-wF-3qv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapPlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIP-Yj-FTK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM1-fp-jKK">
+                                <rect key="frame" x="147" y="492" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.0078431372549019607" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="SMN-1M-ymI"/>
+                                    <constraint firstAttribute="width" constant="80" id="VMd-bR-Lk7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <state key="normal" title="c">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="75k-uP-39z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZL-2e-G1Y">
+                                <rect key="frame" x="59" y="492" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.0078431372549019607" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AAN-9M-urS"/>
+                                    <constraint firstAttribute="width" constant="80" id="hCH-03-Yyb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapMinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XN9-hw-Y41"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52941176470588236" green="0.7803921568627451" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4EC-be-jOx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="80x-Js-MHd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JZL-2e-G1Y" secondAttribute="bottom" constant="95" id="SHr-AE-IyT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HM1-fp-jKK" secondAttribute="bottom" constant="95" id="XwH-dY-gbX"/>
+                            <constraint firstItem="HM1-fp-jKK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fFM-tf-M0C"/>
+                            <constraint firstItem="4EC-be-jOx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hlY-GU-njn"/>
+                            <constraint firstItem="4EC-be-jOx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="kub-9T-uyv"/>
+                            <constraint firstItem="HM1-fp-jKK" firstAttribute="leading" secondItem="JZL-2e-G1Y" secondAttribute="trailing" constant="8" id="obd-2y-LIr"/>
+                            <constraint firstItem="Qmb-Fp-iSN" firstAttribute="leading" secondItem="HM1-fp-jKK" secondAttribute="trailing" constant="8" id="oqT-dX-y7E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qmb-Fp-iSN" secondAttribute="bottom" constant="95" id="vYt-B4-IhB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="HM1-fp-jKK" id="D6x-Go-saK"/>
+                        <outlet property="minusButton" destination="JZL-2e-G1Y" id="rTS-Sq-MBv"/>
+                        <outlet property="numberLabel" destination="4EC-be-jOx" id="MX8-0L-MDC"/>
+                        <outlet property="plusButton" destination="Qmb-Fp-iSN" id="oHq-BM-1NN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
