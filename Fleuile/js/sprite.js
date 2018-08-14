@@ -1,3 +1,5 @@
+//test
+
 $(function(){
 	$('a[href^="#"]').click(function(){
 		var speed = 500;
