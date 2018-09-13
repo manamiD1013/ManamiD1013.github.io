@@ -24,7 +24,7 @@ class TodoListTableViewController: UITableViewController{
         super.viewDidLoad()
         todoCollection.fetchTodos()
         
-    
+   
         
         
 

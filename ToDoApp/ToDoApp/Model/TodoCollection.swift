@@ -64,6 +64,7 @@ class TodoCollection: NSObject {
         dic["date"] = todo.date as AnyObject
         dic["id"] = todo.id as AnyObject
         dic["todoDone"] = todo.todoDone as AnyObject
+        dic["isEditAble"] = todo.isEditAble as AnyObject
         //dic["priority"] = todo.priority.rawValue as AnyObject
         return dic
     }
@@ -75,6 +76,7 @@ class TodoCollection: NSObject {
         todo.date = attiributes["date"] as! String
         todo.id = attiributes["id"] as! String
         todo.todoDone = attiributes["todoDone"] as! Bool
+        todo.isEditAble = attiributes["isEditAble"] as! Bool
         
         
         
