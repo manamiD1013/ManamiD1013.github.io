@@ -19,6 +19,7 @@ class Todo: NSObject {
     var todoDone: Bool = false //Todoを達成したかどうかの判定
     var isEditAble: Bool = false //Todoが編集可能かどうかの判定
     
+    
 
     
     

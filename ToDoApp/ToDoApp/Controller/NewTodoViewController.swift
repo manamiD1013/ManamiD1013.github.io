@@ -43,12 +43,22 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
         descriptionView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1).cgColor
         descriptionView.layer.borderWidth = 1
         
-        //dateFieldに現在時刻を表示する
-        let formatter =  DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let string = formatter.string(from: now)
-        print(string)
-        dateField.placeholder = string
+        if !editAble{
+            //dateFieldに現在時刻を表示する
+            let formatter =  DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+            let string = formatter.string(from: now)
+            print(string)
+            dateField.placeholder = string
+        } else{
+            if editDate != "No Setting"{
+            // デフォルト日付
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+            datePicker.date = formatter.date(from: editDate)!
+            }
+        }
+       
         
         //タップをした際にキーボードを消すためのジェスチャー
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewTodoViewController.tapGesture(_:)))
@@ -277,6 +287,8 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
             let day = dateComponents.day!
             let hour =  dateComponents.hour!
             let minute = dateComponents.minute!
+            
+            print("\(hour):\(minute)")
             
             
             //ローカル通知用の設定
