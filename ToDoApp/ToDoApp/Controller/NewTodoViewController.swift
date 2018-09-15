@@ -271,7 +271,7 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
         //TodoCollection内のsaveメソッドの更新
         todoCollection.save()
        
-        if dateField.text!.isEmpty{
+        if dateField.text! == "No Setting"{
             print("日付を設定しないよ")
             
         }else{
