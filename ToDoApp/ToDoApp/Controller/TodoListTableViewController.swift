@@ -69,15 +69,7 @@ class TodoListTableViewController: UITableViewController{
         }
     
         // Configure the cell...
-//        let todo = self.todoCollection.todos[indexPath.row]
-//        cell.textLabel!.text = todo.title
-//        cell.detailTextLabel!.text = todo.descript
-//        cell.textLabel!.font = UIFont(name: "HirakakuProN-W3", size: 15)
-//        let priorityIcon = UIView(frame: CGRect(x: 0,y:0,width: 12, height:12))
-//        priorityIcon.backgroundColor = todo.priority.color()
-//        priorityIcon.layer.cornerRadius = 6
-//       cell.accessoryView = priorityIcon
-//
+
        
         return cell
     }
@@ -188,42 +180,7 @@ class TodoListTableViewController: UITableViewController{
         
         return action
     }
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        switch editingStyle {
-//        case .delete:
-//            //ローカル通知を削除するためのIDを設定
-//            let todo = self.todoCollection.todos[indexPath.row]
-//            let id = "\(todo.id)"
-//
-//            //削除をするかの確認を行うためのアラートを表示
-//            let alert = UIAlertController(title: "ToDoを削除しますか？", message: "削除されたToDoは復元できません", preferredStyle: UIAlertControllerStyle.alert)
-//            //アラートにボタンを追加
-//           let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action: UIAlertAction) in
-//            self.todoCollection.todos.remove(at: indexPath.row)
-//            self.todoCollection.save()
-//            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.middle)
-//
-//            // 通知の削除
-//            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
-//            print(id)
-//            }
-//            let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel) { (action: UIAlertAction) in
-//
-//            }
-//            //アラートを表示
-//            alert.addAction(cancelAction)
-//            alert.addAction(defaultAction)
-//
-//            self.present(alert, animated: true, completion: nil)
-//
-//
-//        default:
-//            return
-//        }
-//
-//
-//
-//    }
+
    
     /*
     // Override to support conditional editing of the table view.

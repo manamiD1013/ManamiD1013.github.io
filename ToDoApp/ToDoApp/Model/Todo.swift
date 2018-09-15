@@ -7,22 +7,7 @@
 //
 
 import UIKit
-//enum TodoPriority:Int {
-//    case Low = 0
-//    case Middle = 1
-//    case High = 2
-//
-//    func color() -> UIColor{
-//        switch self {
-//        case .Low:
-//            return UIColor(red:198/255,green:57/255,blue:120/255, alpha: 1)
-//        case .Middle:
-//            return UIColor(red:191/255,green:225/255,blue:131/255, alpha: 1)
-//        case .High:
-//            return UIColor(red:248/255,green:244/255,blue:129/255, alpha: 1)
-//        }
-//    }
-//}
+
 
 class Todo: NSObject {
     //Todoを保存するために必要なプロパティの作成
@@ -31,7 +16,6 @@ class Todo: NSObject {
     var date = "" //Todoの締め切りを格納するための変数
     var id = "" //ローカル通知用のIDを格納するための変数
     var todoId:Int! //Todoのセル番号を格納するた目の変数
-    //var priority:TodoPriority = .Low
     var todoDone: Bool = false //Todoを達成したかどうかの判定
     var isEditAble: Bool = false //Todoが編集可能かどうかの判定
     

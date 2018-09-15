@@ -48,8 +48,7 @@ class TodoCollection: NSObject {
         if let todoList = defaults.object(forKey: "todoLists") as? Array<Dictionary<String, AnyObject>> {
             for todoDic in todoList {
                 let todo = TodoCollection.convertTodoModel(attiributes: todoDic)
-              
-                 self.todos.append(todo)
+              self.todos.append(todo)
             }
         }
         
@@ -65,7 +64,7 @@ class TodoCollection: NSObject {
         dic["id"] = todo.id as AnyObject
         dic["todoDone"] = todo.todoDone as AnyObject
         dic["isEditAble"] = todo.isEditAble as AnyObject
-        //dic["priority"] = todo.priority.rawValue as AnyObject
+        
         return dic
     }
     //辞書型で保存されているTodoをTodoクラスのインスタンスに変換する
@@ -78,10 +77,6 @@ class TodoCollection: NSObject {
         todo.todoDone = attiributes["todoDone"] as! Bool
         todo.isEditAble = attiributes["isEditAble"] as! Bool
         
-        
-        
-        
-        //todo.priority = TodoPriority(rawValue: attiributes["priority"] as! Int)!
         return todo
     }
 }
