@@ -43,21 +43,21 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
         descriptionView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1).cgColor
         descriptionView.layer.borderWidth = 1
         
-        if !editAble{
+        //if !editAble{
             //dateFieldに現在時刻を表示する
             let formatter =  DateFormatter()
             formatter.dateFormat = "yyyy/MM/dd HH:mm"
             let string = formatter.string(from: now)
             print(string)
             dateField.placeholder = string
-        } else{
-            if editDate != "No Setting"{
-            // デフォルト日付
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy/MM/dd HH:mm"
-            datePicker.date = formatter.date(from: editDate)!
-            }
-        }
+//        } else{
+//            if editDate != "No Setting"{
+//            // デフォルト日付
+//            let formatter = DateFormatter()
+//            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+//            datePicker.date = formatter.date(from: editDate)!
+//            }
+        //}
        
         
         //タップをした際にキーボードを消すためのジェスチャー
@@ -71,7 +71,14 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
         datePicker.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
         datePicker.addTarget(self, action: #selector(NewTodoViewController.datePickerValueChange(sender:)), for: UIControlEvents.valueChanged)
         dateField.inputView = datePicker
-        
+        if editAble{
+            if editDate != "No Setting"{
+                // デフォルト日付
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy/MM/dd HH:mm"
+                datePicker.date = formatter.date(from: editDate)!
+        }
+        }
         
         //DatePicker上のツールバーの設定
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
