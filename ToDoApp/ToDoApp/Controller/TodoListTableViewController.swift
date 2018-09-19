@@ -58,7 +58,7 @@ class TodoListTableViewController: UITableViewController{
        
         
         let cell = customTableView.dequeueReusableCell(withIdentifier: "customCell") as!  TableViewCell
-         let todo = self.todoCollection.todos[indexPath.row]
+        let todo = self.todoCollection.todos[indexPath.row]
         cell.cellLabel.text = todo.title
         cell.descriptLabel.text = todo.descript
         cell.dateLabel.text = todo.date
@@ -143,6 +143,11 @@ class TodoListTableViewController: UITableViewController{
             
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        customTableView.estimatedRowHeight = 20 //セルの高さ
+        return UITableViewAutomaticDimension //自動設定
+    }
 
     
     //deleteボタンを押して時の処理
@@ -158,15 +163,13 @@ class TodoListTableViewController: UITableViewController{
              let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action: UIAlertAction) in
             self.todoCollection.todos.remove(at: indexPath.row)
             self.todoCollection.save()
-           self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.middle)
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.middle)
             
             // 通知の削除
-           UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
              print(id)
                         }
             let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel) { (action: UIAlertAction) in
-            
-                
              }
             //アラートを表示
             alert.addAction(cancelAction)

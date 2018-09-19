@@ -157,6 +157,7 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "保存", style: UIBarButtonItemStyle.plain, target: self, action: #selector(NewTodoViewController.save))
         
     }
+    
     @objc func close(){
         if todoField.text!.isEmpty{
             //新規作成画面を閉じる
@@ -169,16 +170,14 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
             }
             
             let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action: UIAlertAction) in
-                
             }
-            
             alert.addAction(cancelAction)
             alert.addAction(defaultAction)
             
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
+    
     @objc func save(){
         //todoの内容があるかないか判定
         if todoField.text!.isEmpty{
@@ -196,7 +195,6 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
                 editSave()
             }
         }
-       
     }
     
     func newSave(){
@@ -211,7 +209,6 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
         if dateField.text!.isEmpty{
             todo.date = "No Setting"
         }
-        //            todo.priority = TodoPriority(rawValue: prioritySegment.selectedSegmentIndex)!
         //addTodoCollectionの呼び出し
         self.todoCollection.addTodoCollection(todo: todo)
         print(self.todoCollection.todos)
@@ -233,8 +230,7 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
             let day = dateComponents.day!
             let hour =  dateComponents.hour!
             let minute = dateComponents.minute!
-            
-            
+        
             //ローカル通知用の設定
             let content = UNMutableNotificationContent()
             content.title = "1件の通知"
@@ -253,8 +249,6 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
             center.add(request)
             
         }
-        
-        
     }
     func editSave(){
         //編集前のローカル通知を削除
@@ -285,10 +279,7 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
             let day = dateComponents.day!
             let hour =  dateComponents.hour!
             let minute = dateComponents.minute!
-            
-            print("\(hour):\(minute)")
-            
-            
+           
             //ローカル通知用の設定
             let content = UNMutableNotificationContent()
             content.title = "1件の通知"
@@ -307,8 +298,6 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
             center.add(request)
             
         }
-        
-        
         self.dismiss(animated: true, completion: nil)
     }
    
