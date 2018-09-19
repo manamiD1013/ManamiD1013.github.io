@@ -12,7 +12,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptLabel: UILabel!
     @IBOutlet weak var cellLabel: UILabel!
-    
         override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
