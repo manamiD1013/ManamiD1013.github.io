@@ -12,7 +12,6 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateField: UITextField!
     //それぞれの部品との関連づけ
     @IBOutlet var descriptionView: UITextView!
-
     @IBOutlet weak var todoField: UITextField!
     //TodoCollectionクラスのインスタンス
     let todoCollection = TodoCollection.sharedInstance
@@ -247,14 +246,4 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
         }
         self.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -13,7 +13,7 @@ class ContainerViewController: UIViewController {
     //TodoCollectionクラスのインスタンスを定義
     let todoCollection = TodoCollection.sharedInstance
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {

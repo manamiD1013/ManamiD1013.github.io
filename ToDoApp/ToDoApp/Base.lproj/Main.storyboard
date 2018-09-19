@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vKq-Gc-HFf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="xMg-FX-5vH" kind="embed" id="yHo-Rl-tVk"/>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qg3-Gy-hsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="165.96701649175412"/>
+            <point key="canvasLocation" x="799.20000000000005" y="165.06746626686657"/>
         </scene>
         <!--ToDoの作成-->
         <scene sceneID="l96-ML-WVY">
@@ -183,7 +183,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="TodoListTableViewController" id="xMg-FX-5vH" customClass="TodoListTableViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w26-fA-5Sw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -212,12 +212,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018/10/13 18:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n56-c1-8r8">
-                                            <rect key="frame" x="16" y="12" width="85" height="15"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018/10/13 18:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n56-c1-8r8">
+                                            <rect key="frame" x="16" y="11.5" width="85" height="15"/>
                                             <color key="backgroundColor" red="0.95686274509803926" green="0.77647058823529413" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="15" id="GGp-j6-yBz"/>
-                                                <constraint firstAttribute="width" constant="85" id="myC-Uj-SSf"/>
+                                                <constraint firstAttribute="height" constant="15" id="0T2-Jm-vgA"/>
+                                                <constraint firstAttribute="width" constant="85" id="Tgu-PF-8pM"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -227,16 +227,15 @@
                                     <constraints>
                                         <constraint firstItem="ieE-DE-say" firstAttribute="leading" secondItem="2Ik-cF-FiV" secondAttribute="leadingMargin" id="1pf-gW-Upi"/>
                                         <constraint firstItem="IhF-Vh-8uk" firstAttribute="leading" secondItem="2Ik-cF-FiV" secondAttribute="leading" constant="16" id="7di-lp-l80"/>
-                                        <constraint firstItem="n56-c1-8r8" firstAttribute="leading" secondItem="2Ik-cF-FiV" secondAttribute="leadingMargin" id="KDT-8D-Sib"/>
-                                        <constraint firstItem="IhF-Vh-8uk" firstAttribute="top" secondItem="n56-c1-8r8" secondAttribute="bottom" constant="0.5" id="Rjy-Ka-2CD"/>
+                                        <constraint firstItem="IhF-Vh-8uk" firstAttribute="top" secondItem="n56-c1-8r8" secondAttribute="bottom" constant="0.5" id="ENU-2p-rwV"/>
                                         <constraint firstItem="ieE-DE-say" firstAttribute="trailing" secondItem="2Ik-cF-FiV" secondAttribute="trailingMargin" id="aUB-Ur-wjy"/>
                                         <constraint firstItem="ieE-DE-say" firstAttribute="leading" secondItem="2Ik-cF-FiV" secondAttribute="leadingMargin" id="dhy-3H-WZx"/>
                                         <constraint firstItem="ieE-DE-say" firstAttribute="trailing" secondItem="2Ik-cF-FiV" secondAttribute="trailingMargin" id="eF2-vd-Tqu"/>
                                         <constraint firstItem="ieE-DE-say" firstAttribute="bottom" secondItem="2Ik-cF-FiV" secondAttribute="bottomMargin" id="eJZ-zw-j0P"/>
                                         <constraint firstAttribute="trailing" secondItem="IhF-Vh-8uk" secondAttribute="trailing" constant="16" id="eVi-cx-QWD"/>
-                                        <constraint firstItem="n56-c1-8r8" firstAttribute="leading" secondItem="2Ik-cF-FiV" secondAttribute="leadingMargin" id="kCp-1c-Ccp"/>
+                                        <constraint firstItem="n56-c1-8r8" firstAttribute="top" secondItem="2Ik-cF-FiV" secondAttribute="topMargin" constant="0.5" id="fb8-85-kY5"/>
+                                        <constraint firstItem="n56-c1-8r8" firstAttribute="leading" secondItem="2Ik-cF-FiV" secondAttribute="leading" constant="16" id="iTr-BL-25S"/>
                                         <constraint firstItem="ieE-DE-say" firstAttribute="leading" secondItem="2Ik-cF-FiV" secondAttribute="leadingMargin" id="lR3-I7-18h"/>
-                                        <constraint firstItem="n56-c1-8r8" firstAttribute="top" secondItem="2Ik-cF-FiV" secondAttribute="topMargin" constant="0.5" id="lrN-rW-hWp"/>
                                         <constraint firstItem="ieE-DE-say" firstAttribute="top" secondItem="IhF-Vh-8uk" secondAttribute="bottom" constant="0.5" id="r3P-7S-Fyh"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -261,7 +260,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14p-pb-ZsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="1070.9145427286358"/>
+            <point key="canvasLocation" x="800.5" y="1070.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qcc-lj-Elo">
@@ -284,6 +283,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OWP-E5-7Gf"/>
+        <segue reference="Y0B-ck-NIU"/>
     </inferredMetricsTieBreakers>
 </document>
